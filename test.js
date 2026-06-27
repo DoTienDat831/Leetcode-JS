@@ -1,11 +1,19 @@
-let s = ""
+let arr1 = [1,2,3,4,5];
+let arr2 = [6,7,8,9,10,11,12,13,14,15,16,17];
 
-let left = 0;
+const mergedArray = [...arr1, ...arr2];
+mergedArray.sort((a, b) => a - b);
 
-let myMap = new Map();
-let longest = 0;
+console.log("Merge: ", mergedArray);
 
-myMap.set(" ");
+let arrSize = arr1.length + arr2.length;
+console.log("Arr Size: ", arrSize);
 
-
-console.log(myMap)
+if (arrSize % 2 != 0) { // odd
+    let mid = Math.floor(arrSize / 2);
+    console.log(mid);
+    console.log(mergedArray[mid]);
+} else { //even
+    let mid = arrSize / 2;
+    console.log((mergedArray[mid] + mergedArray[mid - 1]) / 2);
+}

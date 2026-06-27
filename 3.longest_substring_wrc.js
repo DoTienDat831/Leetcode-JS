@@ -22,4 +22,4 @@ var lengthOfLongestSubstring = function(s) {
     return longest;
 };
 
-console.log(lengthOfLongestSubstring(" "))
+console.log(lengthOfLongestSubstring("abcdefqa"))
