@@ -24,11 +24,11 @@ var climbStairs = function(n) {
     if (n == 1) {return 1;}
     if (n == 2) {return 2;}
 
-    let prev2 = 1; // dp[1]
-    let prev1 = 2; // dp[2]
+    let prev2 = 1; // dp[1] - ways to climb the previous previous stair
+    let prev1 = 2; // dp[2] - ways to climb the previous stair
 
     for(let i = 3; i <= n; i++) {
-        let current = prev1 + prev2;
+        let current = prev1 + prev2; // current ways equal to 2 preivous ways to climb combine
 
         prev2 = prev1;
         prev1 = current;
