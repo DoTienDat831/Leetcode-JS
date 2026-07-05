@@ -1,9 +1,6 @@
-let x = 121;
-let y = 0;
+nums = [4, 2, 3, 6, 1, 8, 7];
+n = nums.length;
 
-while (x != 0) {
-    console.log(x % 10);
-    y = y * 10 + (x % 10);
-    x = (x - (x % 10)) / 10;
-    console.log(y)
-}
+nums.sort();
+
+console.log(nums);
